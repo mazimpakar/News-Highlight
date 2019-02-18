@@ -7,6 +7,7 @@
         {% else %}
         <title> Welcome to The News Review online </title>
         {% endif %}
+        {% extends 'base.html'%}
         {% import 'macros.html' as macro%}
     </head>
     <body>
@@ -17,6 +18,8 @@
                <li>{{ popular_news.title}}</li>
            {% endfor %}
        </ul>    -->
+            <!-- Content block -->
+            {% block content %}
        
             <!-- Popular news -->
             <h3> Popular News</h3>
@@ -33,6 +36,7 @@
             <ul>
                 {{ macro.displayNewsList(newspapers)}}
             </ul>
+            {% endblock%}
         
         
     </body>
