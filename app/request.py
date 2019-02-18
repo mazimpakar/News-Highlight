@@ -13,19 +13,19 @@ def get_news(category):
     '''
     Function that gets the json response to our url request
     '''
-    get_news_url = base_url.format(category,api_key)
+    get_news_url = base_url
 
     with urllib.request.urlopen(get_news_url) as url:
         get_news_data = url.read()
         get_news_response = json.loads(get_news_data)
-
+        
         news_results = None
 
-        if get_news_response['results']:
-            news_results_list = get_news_response['results']
+        if get_news_response['articles']:
+            news_results_list = get_news_response['articles']
             news_results = process_results(news_results_list)
 
-
+        print(news_results)
     return news_results
 def process_results(news_list):
     '''
@@ -46,9 +46,9 @@ def process_results(news_list):
         description =news_item.get('description')
         publishedAt = news_item.get('publishedAt')
 
-        if poster:
-            news_object = News(name,author,title,urlImage ,description,publishedAt)
-            news_results.append(news_object)
+        
+        news_object = News(name,author,title,urlImage ,description,publishedAt)
+        news_results.append(news_object)
 
     return news_results 
 
