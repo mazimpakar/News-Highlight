@@ -7,7 +7,7 @@ class News:
         self.name =name
         self.author =author
         self.title = title
-        self.urlImage ="https://s2.reutersmedia.net/resources/r/?m=02&d=20190215&t=2&i=1356813496&w=1200&r=LYNXNPEF1E0ID"
+        self.urlImage ="https://www.thehindu.com/sci-tech/technology/dx56fs/article26303250.ece/ALTERNATES/LANDSCAPE_615/19bgm-video-controller-3366571920"
         self.description =description
         self.publishedAt=publishedAt
         
