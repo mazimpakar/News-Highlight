@@ -43,7 +43,8 @@ def news(news_name):
     '''
     View news page function that returns the news details page and its data
     '''
-    title = f'You are viewing {news_name}'
+    news = get_news(name)
+    title = f'{news.title}'
     return render_template('index.html', name = name, author = author,title = title,description = description, full_article = full_article,publishedAt = publishedAt ) 
     
 
