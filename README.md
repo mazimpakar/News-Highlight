@@ -20,11 +20,11 @@ In this application,
 
 User should see various news sources on the homepage.
 
-User should   select a news source and see all news articles from the selected news source.
+User should select a news source and see all news articles from the selected news source.
 
-User should want to see the image, description and the time a news article was created..
+User should  see the image, description and the time a news article was created..
 
-User should want to click on an article and read the full article on the source website.  .
+User should click on an article and read the full article on the source website.  .
 
 
 ## Technologie Used
