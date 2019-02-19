@@ -1,16 +1,15 @@
-<!-- f64a31e5dca5460ab7e3f34713eb9670 news key api -->
 
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        {% if title %}
-        <title> {{ title }}</title>
-        {% else %}
-        <title> Welcome to The News Review online </title>
-        {% endif %}
-    </head>
-    <body>
-        <h1> News Highlight {{ id }} </h1>
-    </body>
-</html>
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}
+
+
+{% block content %}
+
+<div class="container">
+  <h3 class="text-center" style="font-weight: bold; font-size: 16px;">News </h3>
+  <hr><br>
+      <div class="row">
+        {{ macro.displayNewsList(news) }}
+      </div>
+</div>
+{% endblock %}
