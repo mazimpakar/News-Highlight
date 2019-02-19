@@ -27,6 +27,27 @@ def get_news(category):
 
         print(news_results)
     return news_results
+
+def get_news(name):
+    get_news_details_url = base_url.format(name,api_key)
+
+    with urllib.request.urlopen(get_news_details_url) as url:
+        news_details_data = url.read()
+        news_details_response = json.loads(news_details_data)
+
+        news_object = None
+        if news_details_response:
+           name = news_details_response.get('name')
+            author= news_details_response.get('author')
+            title = news_details_response.get('title')
+            urlImage  = news_details_response.get('urlImage ')
+            description = news_details_response.get('description')
+            publishedAt = news_details_response.get('publishedAt')
+
+            news_object = News(name, author,title,urlImage ,description,publishedAt)
+
+    return news_object
+
 def process_results(news_list):
     '''
     Function  that processes the news result and transform them to a list of Objects
@@ -51,6 +72,16 @@ def process_results(news_list):
         news_results.append(news_object)
 
     return news_results 
+
+
+   
+
+
+
+
+
+
+
 
 
 
