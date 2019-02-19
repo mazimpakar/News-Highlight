@@ -14,6 +14,7 @@ class ProdConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
+    NEWS_API_KEY ='f64a31e5dca5460ab7e3f34713eb9670' 
     pass
 
 
