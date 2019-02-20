@@ -31,7 +31,7 @@ User should click on an article and read the full article on the source website.
 
 Python by using flask
 
-## Link site: https://github.com/mazimpakar/News-Highlight
+## Link site: https://mazimpakar.herokuapp.com/
 ## Setup/Installation Requirements
 
 ## Support and contact details
