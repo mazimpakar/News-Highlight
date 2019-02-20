@@ -1,7 +1,7 @@
 from flask import render_template
 from app import app
 
-from .request import get_sources,get_articles
+from .request import get_sources,get_news
 # from .models import Source,Article
 
 
@@ -27,7 +27,7 @@ def index():
 @app.route('/news/<id>')
 def news(id):
     '''View a specific source page and its news'''
-    news = get_articles(id)
+    news = get_news(id)
     title = f'{id}'
     return render_template('news.html',id = id, news = news)
   

@@ -59,7 +59,7 @@ def process_results(source_list):
 
 
 
-def get_articles(name):
+def get_news(name):
     '''Function thet gets the json response to our url request'''
     get_news_url = news_base_url.format(name,api_key)
     with urllib.request.urlopen(get_news_url) as url:
@@ -89,12 +89,13 @@ def process_news(news_list):
         # name = news_item.get('name')
         author= news_item.get('author')
         title = news_item.get('title')
-        urlImage = news_item.get('urlToImage')
+        urlToImage = news_item.get('urlToImage')
         description = news_item.get('description')
+        url=news_item.get('url')
         publishedAt = news_item.get('publishedAt')
         content = news_item.get('content')
-        if urlImage:
-            news_object = News(author,title,urlImage,description,publishedAt,content)
+        if author:
+            news_object = News(author,title,urlToImage,description,url,publishedAt,content)
             news_results.append(news_object)
     return news_results
 
