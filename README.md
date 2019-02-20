@@ -33,6 +33,9 @@ Python by using flask
 
 ## Link site: https://mazimpakar.herokuapp.com/
 ## Setup/Installation Requirements
+ In this application we user:
+ Python by using Flask
+
 
 ## Support and contact details
 
